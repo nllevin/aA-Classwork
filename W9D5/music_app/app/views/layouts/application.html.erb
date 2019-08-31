@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MusicApp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <style>
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 3px solid black;
+      }
+
+      nav {
+        display: flex;
+        align-items: center;
+      }
+
+      body {
+        font-family: "Futura";
+        margin: 20px;
+      }
+
+      a {
+        color: black;
+        text-decoration: none;
+      }
+
+      input, p {
+        margin: 0px 10px 0px 0px;
+      }
+      
+      ul li {
+        list-style-type: none;
+      }
+
+      header > a {
+        text-decoration: none;
+        color: black;
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: black;
+        padding: 2px 5px 3px 6px;
+        border: 2px solid black;
+        border-radius: 12px;
+        margin: 5px;
+      }
+
+      form.button_to {
+        display: inline;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <%= link_to 'Music App', bands_url %>
+      <nav>
+      <% if logged_in? %>
+        <p>Logged in as: <%= current_user.email %></p>
+        <%= button_to "Sign out", session_url, method: :delete %>
+      <% else %>
+        <%= link_to 'Sign in', new_session_url %>
+        <%= link_to 'Sign up', new_user_url %>
+      <% end %>
+      </nav>
+    </header>
+
+
+    <%= flash[:error] %>
+    <%= flash[:success] %>
+    <%= flash[:notice] %>
+
+    <br>
+
+    <%= yield %>
+  </body>
+</html>
