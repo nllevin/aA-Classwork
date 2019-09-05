@@ -1,0 +1,111 @@
+iframe {
+  width: 100%;
+  height: 315px;
+  display: block;
+}
+
+.main-content {
+  padding-top: 20px;
+}
+
+.main-content ul {
+  list-style: disc outside none;
+  padding-left: 15px;
+}
+
+.main-content > a {
+  display: block;
+}
+
+.main-content a:hover {
+  text-decoration: none;
+}
+
+.main-content a:hover h1 {
+  text-decoration: underline;
+} 
+
+.byline {
+  color: $gray;
+  line-height: 1.5;
+  font-size: 11px;
+  padding-top: 3px;
+}
+
+.lead-story h1 {
+  font-size: 24px;
+  font-style: italic;
+}
+
+.lead-story li {
+  margin: 10px 0px;
+  line-height: 1.5;
+}
+
+.lead-story a:last-of-type::before {
+  content: "";
+  height: 4px;
+  width: 7px;
+  background-color: $blue;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  top: 5px;
+  margin-right: 2px;
+}
+
+.lead-story a:last-of-type:hover {
+  color: $blue;
+  text-decoration: underline;
+}
+
+figcaption {
+  padding: 10px 0;
+}
+
+.center-column hr {
+  width: 50%;
+}
+
+.center-column p {
+  padding: 5px 0;
+}
+
+.opinions > h1 {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.opinions li {
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.opinions h2 {
+  text-transform: uppercase;
+  padding-bottom: 3px;
+}
+
+.opinions form {
+  display: flex; 
+  font-family: $sans-serif;
+}
+
+.opinions input {
+ flex: 1;
+ border: 1px solid black;
+ border-right: 0;
+ padding-left: 10px;
+}
+
+.opinions button {
+  border-radius: 0 3px 3px 0;
+}
+
+.opinions footer p {
+  text-align: center; 
+  color: $gray; 
+  font-size: 10px;
+  margin-top: 5px;
+
+}
