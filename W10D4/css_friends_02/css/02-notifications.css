@@ -1,0 +1,43 @@
+/* PHASE 2: Notifications */
+.badge {
+  border-radius: 10px;
+  background-color: black;
+  padding: 1px 6px 1px 6px;
+  font-size: 14px;
+}
+
+.dropdown:hover .badge {
+  background-color: red;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown ul {
+  display: none;
+  position: absolute;
+  background-color: white;
+  color: black;
+}
+
+.dropdown li {
+  width: 240px;
+  height: 40px;
+  border: 1px solid #ccc;
+  border-top: none;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.dropdown li:hover {
+  background-color: #eee;
+}
+
+.dropdown li:last-of-type {
+  border-radius: 0 0 5px 5px;
+}
+
+.dropdown:hover ul {
+  display: block;
+}

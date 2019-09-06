@@ -1,0 +1,31 @@
+<h1><%= @post.title %> by <%= @post.author.username %></h1>
+
+<% if @post.author_id == current_user.id %>
+<%= link_to 'Edit Post', edit_post_url(@post.id) %>
+<% end %>
+
+
+<h2>Content:</h2>
+<p><%= @post.content %></p>
+
+<h2>Subs</h2>
+<ul>
+  
+  <% @post.subs.each do |sub| %>
+    <br>
+  <li><%= link_to sub.title, sub_url(sub.id) %></li>
+  <% end %>
+  
+</ul>
+
+<h2>Comments</h2>
+
+<% if logged_in? %>
+  <%= link_to 'Add comment', new_post_comment_url(@post.id) %>
+<% end %>
+<ul>
+<% @post.comments.each do |comment| %>
+  <br>
+  <li><%= comment.content %></li>
+<% end %>
+</ul>
