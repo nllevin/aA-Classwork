@@ -1,0 +1,23 @@
+<h1>Exceptions</h1>
+
+<h2>Error message: <%= @e.message %></h2>
+
+<h2>Source code from <%= @error_path %>:</h2>
+<ul>
+  <p>...</p>
+  
+  <% @code_snippet.each_with_index do |line, i| %>
+  <li><%= "#{@line_number - 1 + i}: #{line}" %></li>
+  <% end %>
+  
+  <p>...</p>
+</ul>
+
+<h2>Stack trace:</h2>
+<ul>
+  <% @e.backtrace.each do |stack_level| %>
+  <li>
+    <%= stack_level %>
+  </li>
+  <% end %>
+</ul>
