@@ -27,7 +27,7 @@ export default class Level {
       xPos: (3 * CONSTANTS.PIPE_SPACING - CONSTANTS.PIPE_WIDTH) + startShift, 
       topOfGapPos: 
         Math.random() 
-          * (this.dimensions.height - CONSTANTS.PIPE_GAP - 2 * CONSTANTS.PIPE_MIN_DIST_FROM_EDGE)
+          * (this.dimensions.height - CONSTANTS.PIPE_GAP - CONSTANTS.PIPE_MIN_DIST_FROM_EDGE)
           + CONSTANTS.PIPE_MIN_DIST_FROM_EDGE
     };
   }
@@ -37,7 +37,7 @@ export default class Level {
     this.updateScore();
     this.drawBackground(ctx);
     this.drawPipes(ctx);
-    if (this.pipes[0].xPos < 3 * CONSTANTS.PIPE_SPACING - CONSTANTS.PIPE_WIDTH - CONSTANTS.PIPE_VELOCITY) {
+    if (this.pipes[0].xPos < 3 * CONSTANTS.PIPE_SPACING - CONSTANTS.PIPE_WIDTH - 2 * CONSTANTS.PIPE_VELOCITY) {
       this.drawScore(ctx);
     }
   }
