@@ -1,0 +1,74 @@
+h1 {
+  text-align: center;
+  font-size: 60px;
+  font-family: sans-serif;
+  font-weight: 700;
+  margin: 30px;
+}
+
+.hanoi {
+  display: flex;
+  justify-content: center;
+}
+
+.tower {
+  width: 180px;
+  height: 210px;
+  box-sizing: border-box;
+  margin: 0 20px 0 0;
+  border-bottom: 10px solid black;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  padding: 0 0 20px 0;
+}
+
+.tower:hover {
+  border-bottom: 10px solid blue;
+  cursor: pointer;
+}
+
+.clicked {
+  border-bottom: 10px solid red;
+}
+
+.clicked:hover {
+  border-bottom: 10px solid red;
+}
+
+.game-over:hover {
+  cursor: default;
+  border-bottom: 10px solid black;
+}
+
+.game-over .level {
+  background-color: green;
+}
+
+
+
+.level {
+  height: 50px;
+  width: 0px;
+  background-color: #808080;
+  border-radius: 25px;
+  margin-top: 10px;
+}
+
+.disc-size-1 {
+  width: 60px;
+}
+
+.disc-size-2 {
+  width: 120px;
+}
+
+.disc-size-3 {
+  width: 180px;
+}
+
+.tower:nth-of-type(1) {
+  margin-left: 0;
+}
