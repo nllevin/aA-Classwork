@@ -1,0 +1,120 @@
+
+html {
+  box-sizing: border-box;
+  background: #A9DBB8;
+  text-align: center;
+}
+
+h1 {
+  color: #F0F2EF;
+  font-family: 'helvetica neue';
+  font-size: 54px;
+  font-weight: 700;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  padding: 50px 30px;
+}
+
+.welcome {
+  font-weight: 400;
+  margin-top: 50px;
+}
+
+.clock-holder {
+  order: -1;
+}
+
+#clock {
+  padding: 20px 10px;
+  border: 1px solid #F0F2EF;
+  border-radius: 5px;
+  color: white;
+  font-size: 24px;
+  font-family: 'helvetica neue';
+}
+
+.drop-down-dog-nav {
+  width: 150px;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.drop-down-dog-nav h3 {
+  background-color: #eeeeee;
+  border-radius: 5px;
+  color: #aaa;
+  font-weight: bold;
+  font-family: 'helvetica neue';
+  padding: 10px;
+}
+
+.drop-down-dog-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: absolute;
+  background-color: #eee;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.dog-link {
+  display: none;
+}
+
+.dog-link.open {
+  display: block;
+  padding: 10px 5px;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 400px;
+}
+
+.dog-link.open > a {
+  color: #aaa;
+  font-weight: bold;
+  font-family: 'helvetica neue';
+}
+
+.dog-drop-down-list {
+  width: 100%;
+}
+
+.drop-down-dog-nav:hover {
+  background-color: #eeeeee;
+  border-radius: 5px;
+}
+
+/*  Phase 4: Slide In & Out Classes */
+
+.align-left {
+  float: left;
+  margin-right: 20px;
+}
+
+.align-right {
+  float: right;
+  margin-left: 20px;
+}
+
+.slide {
+  opacity: 0;
+  transition: all .5s;
+}
+
+.align-left.slide {
+  transform: translateX(-30%) scale(0.95);
+}
+
+.align-right.slide {
+  transform: translateX(30%) scale(0.95);
+}
+
+.slide.active {
+  opacity: 1;
+  transform: translateX(0%) scale(1);
+}
+
