@@ -1,0 +1,120 @@
+h1, div, p, main, ul, li, section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: inherit;
+  font-weight: inherit;
+  font-family: inherit;
+  background-color: transparent;
+  text-align: inherit;
+  box-sizing: border-box;
+  color: inherit;
+  line-height: 1;
+  display: block;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+.clock {
+  margin: 0 auto;
+  width: 575px;
+}
+
+.clock h1 {
+  font-size: 36px;
+  font-weight: 700;
+  padding: 20px 0;
+  font-family: sans-serif;
+}
+
+.clock-display {
+  background-color: orange;
+  border: 2px solid black;
+  padding: 20px;
+  font-family: "Open Sans";
+}
+
+.clock-display div {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.clock-display div:first-of-type {
+  padding-bottom: 20px;
+}
+
+.tabs {
+  margin: 0 auto;
+  font-family: sans-serif;
+  width: 200px;
+}
+
+.tabs > h1 {
+  font-size: 36px;
+  font-weight: 700;
+  padding: 20px 0;
+  font-family: sans-serif;
+}
+
+.tabs > ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+.tabs li {
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  padding: 5px 0;
+  border-radius: 10px 10px 0 0;
+  background-color: lightblue;
+  width: calc(200px / 3);
+  text-align: center;
+  cursor: pointer;
+  width: 67px;
+}
+
+.tabs li:hover {
+  background-color: black;
+  color: white;
+}
+
+.tabs li:first-child {
+  border-left: 2px solid black;
+}
+
+.tabs li:last-child {
+  border-right: 2px solid black;
+}
+
+li.active {
+  font-weight: 700;
+  border-bottom: 0;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+}
+
+.tab-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: lightblue;
+  border-left: 2px solid black;
+  border-bottom: 2px solid black;
+  border-right: 2px solid black;
+  width: 200px;
+  height: 195px;
+}
+
+.tab-content > p {
+  color: white;
+  text-align: center;
+  font-weight: 700;
+}
