@@ -1,0 +1,22 @@
+{
+  "name": "graphql_online_store",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon --inspect index.js"
+  },
+  "author": "Noah and Abby",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-graphql": "^0.9.0",
+    "graphql": "^14.5.8",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.7.8",
+    "nodemon": "^1.19.4",
+    "validator": "^12.0.0"
+  }
+}
